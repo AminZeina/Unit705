@@ -100,7 +100,7 @@ jumpButton.id = "jump button"
 jumpButton.alpha = 0.5
 
 local function characterCollision( self, event )
- 
+    -- print what the chararcter collided with
     if ( event.phase == "began" ) then
         print( self.id .. ": collision began with " .. event.other.id )
  
@@ -189,6 +189,5 @@ rightArrow:addEventListener( "touch", rightArrow )
 leftArrow:addEventListener( "touch", leftArrow )
 jumpButton:addEventListener( "touch", jumpButton)
 Runtime:addEventListener( "enterFrame", checkCharacterPosition )
-
 theCharacter.collision = characterCollision
 theCharacter:addEventListener( 'collision')
